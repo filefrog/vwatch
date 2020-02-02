@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cat <<EOF
+USAGE: docker run [...] filefrog/vwatch [type] [version] -- COMMAND
+
+KNOWN TYPES
+
+  docker             The Docker daemon software (source) distribution
+  docker-compose     The docker-compose Python source distribution
+  git                Git Version Control source distribution
+
+EOF

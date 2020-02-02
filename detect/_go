@@ -1,0 +1,12 @@
+#!/bin/bash
+set -eu
+
+cmd=${1:-help}; shift
+if [[ -x /detect/$cmd ]]; then
+  exec /detect/$cmd "$@"
+  echo >&2 "exec failed!"
+  exit 1
+fi
+
+echo >&2 "unrecognized detection heuristic '$cmd': try 'help'"
+exit 2
